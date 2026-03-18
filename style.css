@@ -182,3 +182,16 @@ footer {
     font-size: 0.8rem;
     color: #666;
 }
+/* Pinterest Link Styling */
+.pinterest-link {
+    color: #e60023 !important; /* Pinterest Red */
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.pinterest-link:hover {
+    border-bottom: 2px solid #e60023;
+    padding-bottom: 2px;
+}
