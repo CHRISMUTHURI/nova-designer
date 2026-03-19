@@ -113,11 +113,55 @@ section {
     text-align: center;
 }
 
-.about p {
-    font-size: 1.2rem;
-    max-width: 800px;
+/* About Section — side-by-side layout */
+.about {
+    text-align: left;
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
     margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-image-wrap {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid #00d4ff;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 60px rgba(0, 212, 255, 0.45);
+}
+
+.about-text {
+    flex: 1 1 320px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-text p {
+    font-size: 1.1rem;
     color: #ccc;
+    line-height: 1.9;
 }
 
 .service-grid {
@@ -177,11 +221,15 @@ footer {
     font-size: 1.1rem;
 }
 
+
+
+
 .footer-bottom {
     margin-top: 40px;
     font-size: 0.8rem;
     color: #666;
 }
+
 /* Pinterest Link Styling */
 .pinterest-link {
     color: #e60023 !important; /* Pinterest Red */
@@ -194,85 +242,4 @@ footer {
 .pinterest-link:hover {
     border-bottom: 2px solid #e60023;
     padding-bottom: 2px;
-}
-/* About Section - New Layout with Image */
-.about-wrapper {
-    display: flex;
-    align-items: center; /* Vertical center alignment */
-    justify-content: space-between; /* Create space between image and text */
-    gap: 60px; /* Force consistent space between them */
-    margin-top: 50px;
-    text-align: left; /* Make text readable, overrides previous center rule */
-}
-
-.about-image-container {
-    flex: 1; /* Take up roughly half the space */
-    max-width: 45%;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden; /* For smooth borders and effects */
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4); /* Add dimension */
-    border: 1px solid #333; /* Subtle border that fits the dark theme */
-}
-
-.about-photo {
-    width: 100%; /* Make the image fill its container */
-    height: auto;
-    display: block;
-    transition: 0.5s ease; /* For youthful/fun hover effect */
-}
-
-.about-image-container:hover .about-photo {
-    transform: scale(1.03); /* Subtle zoom on hover */
-}
-
-/* The space for the text */
-.about-text-content {
-    flex: 1.2; /* Take up slightly more space for easier reading */
-}
-
-/* Redefine about title for new layout */
-.about .about-text-content h2 {
-    margin-bottom: 30px;
-    font-size: 3rem; /* Classy large title */
-    color: #00d4ff; /* Highlight color */
-}
-
-.about .about-text-content p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: #eee;
-    margin-bottom: 40px;
-}
-
-/* Classy button under the description */
-.cta-secondary {
-    display: inline-block;
-    padding: 10px 25px;
-    background: transparent;
-    color: #00d4ff;
-    border: 2px solid #00d4ff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.cta-secondary:hover {
-    background: #00d4ff;
-    color: #000;
-}
-
-/* MOBILE FIX (Ensures it stacks on phones) */
-@media (max-width: 900px) {
-    .about-wrapper {
-        flex-direction: column; /* Stack vertically on small screens */
-        gap: 40px;
-    }
-    
-    .about-image-container {
-        max-width: 100%; /* Image fills mobile screen width */
-        width: 80%; /* But not full full width, for style */
-        margin: auto;
-    }
 }
